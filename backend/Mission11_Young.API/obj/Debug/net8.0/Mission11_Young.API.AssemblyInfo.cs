@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mission11_Young.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9682d843af02958b8484220a06cc4f1e47816ad0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+719c3f6ce8ff0cde73379214578d224da6cdb25f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mission11_Young.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mission11_Young.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
