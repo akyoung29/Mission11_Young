@@ -4,15 +4,16 @@ import { useEffect, useState } from "react";
 function BookList() {
 
     const [book, setBook] = useState<Book[]>([]);
-    const [pageSize, setPageSize] = useState<number>(10);
+    const [pageSize, setPageSize] = useState<number>(5);
     const [pageNum, setPageNum] = useState<number>(1);
     const [totalItems, setTotalItems] = useState<number>(0);
     const [totalPages, setTotalPages] = useState<number>(1);
+    const [sortOrder, setSortOrder] = useState<string>("asc");
 
     useEffect(() => {
         const fetchProjects = async () => {
             const response = await fetch(
-                `https://localhost:5000/api/Book?pageHowMany=${pageSize}&pageNum=${pageNum}`
+                `https://localhost:5000/api/Book?pageHowMany=${pageSize}&pageNum=${pageNum}&sortOrder=${sortOrder}`
             );
             const data = await response.json();
             setBook(data.books);
@@ -21,7 +22,7 @@ function BookList() {
         };
 
         fetchProjects();
-    }, [pageSize, pageNum, totalItems]);
+    }, [pageSize, pageNum, totalItems, sortOrder]);
 
     return(
         <>
@@ -66,6 +67,18 @@ function BookList() {
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
+                </select>
+            </label>
+
+            <br />
+            <label>
+                Sort by Title:
+                <select
+                    value={sortOrder}
+                    onChange={(e) => setSortOrder(e.target.value)}
+                >
+                    <option value="asc">A-Z</option>
+                    <option value="desc">Z-A</option>
                 </select>
             </label>
         </>
