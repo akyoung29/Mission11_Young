@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|c:\\users\\annay\\onedrive\\documents\\school\\is core\\is 413\\mission11_young\\backend\\mission11_young.api\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|solutionrelative:backend\\mission11_young.api\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Book.cs",
+              "RelativeDocumentMoniker": "backend\\Mission11_Young.API\\Book.cs",
+              "ToolTip": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Book.cs",
+              "RelativeToolTip": "backend\\Mission11_Young.API\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T18:52:26.454Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
