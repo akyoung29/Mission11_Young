@@ -16,26 +16,32 @@ namespace Mission11_Young.API.Controllers
             _context = temp;
         }
 
-        public IActionResult GetBooks(int pageHowMany = 5, int pageNum = 1, string sortOrder = "asc")
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, [FromQuery] List<string>? bookCategories = null, string sortOrder = "asc")
         {
-            IQueryable<Book> booksQuery = _context.Books;
+            var query = _context.Books.AsQueryable();
+
+            if (bookCategories != null && bookCategories.Any())
+            {
+                query = query.AsQueryable().Where(b => bookCategories.Contains(b.Category));
+            }
+            
 
             // Sort by title based on the sortOrder
             if (sortOrder.ToLower() == "desc")
             {
-                booksQuery = booksQuery.OrderByDescending(b => b.Title);
+                query = query.OrderByDescending(b => b.Title);
             }
             else
             {
-                booksQuery = booksQuery.OrderBy(b => b.Title);
+                query = query.OrderBy(b => b.Title);
             }
 
-            var something = booksQuery
-                .Skip((pageNum-1)*pageHowMany)
-                .Take(pageHowMany)
+            var something = query
+                .Skip((pageNum-1)*pageSize)
+                .Take(pageSize)
                 .ToList();
             
-            var totalNumBooks = _context.Books.Count();
+            var totalNumBooks = query.Count();
 
             var someObject = new
             {
@@ -44,6 +50,17 @@ namespace Mission11_Young.API.Controllers
             };
 
             return Ok(someObject);
+        }
+
+        [HttpGet("GetBookCategories")]
+        public IActionResult GetBookCategories ()
+        {
+            var bookCategories = _context.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+
+            return Ok(bookCategories);
         }
     }
 }
