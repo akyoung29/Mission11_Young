@@ -35,7 +35,9 @@ function CategoryFilter({
   }
 
   return (
-    <div className="category-filter">
+    <>
+    <br></br>
+    <div className="category-filter border border-danger p-2">
       <h5>Book Categories</h5>
       <div className="category-list">
         {categories.map((c) => (
@@ -52,6 +54,7 @@ function CategoryFilter({
         ))}
       </div>
     </div>
+    </>
   );
 }
 
