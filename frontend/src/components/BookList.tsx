@@ -1,19 +1,24 @@
-import { Book } from './types/Book';
+import { Book } from '../types/Book';
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
-function BookList() {
-
+function BookList({selectedCategories }: {selectedCategories: string[] }) {
     const [book, setBook] = useState<Book[]>([]);
     const [pageSize, setPageSize] = useState<number>(5);
     const [pageNum, setPageNum] = useState<number>(1);
     const [totalItems, setTotalItems] = useState<number>(0);
     const [totalPages, setTotalPages] = useState<number>(1);
     const [sortOrder, setSortOrder] = useState<string>("asc");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchProjects = async () => {
+        const fetchBooks = async () => {
+            const categoryParams = selectedCategories
+                .map((cat) => `bookCategories=${encodeURIComponent(cat)}`)
+                .join('&');
+
             const response = await fetch(
-                `https://localhost:5000/api/Book?pageHowMany=${pageSize}&pageNum=${pageNum}&sortOrder=${sortOrder}`
+                `https://localhost:5000/api/Book?pageSize=${pageSize}&sortOrder=${sortOrder}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`
             );
             const data = await response.json();
             setBook(data.books);
@@ -21,8 +26,8 @@ function BookList() {
             setTotalPages(Math.ceil(totalItems/pageSize));
         };
 
-        fetchProjects();
-    }, [pageSize, pageNum, totalItems, sortOrder]);
+        fetchBooks();
+    }, [pageSize, pageNum, totalItems, sortOrder, selectedCategories]);
 
     return(
         <>
@@ -40,19 +45,38 @@ function BookList() {
                             <li><strong>Page Count:</strong> {b.pageCount}</li>
                             <li><strong>Price:</strong> {b.price}</li>
                         </ul>
+                        <button
+                            className="btn btn-success"
+                            onClick={()=> 
+                                navigate(`/buy/${b.title}/${b.bookID}`)
+                            }
+                        >
+                            Buy
+                        </button>
                     </div>
                 </div>
             ))}
 
-            <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum -1)}>Previous</button>
+            <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum -1)}>
+                Previous
+            </button>
 
             {[...Array(totalPages)].map((_, index) => (
-                <button key={index + 1} onClick={() => setPageNum(index + 1)} disabled={pageNum === (index + 1)}>
+                <button 
+                    key={index + 1} 
+                    onClick={() => setPageNum(index + 1)} 
+                    disabled={pageNum === (index + 1)}
+                >
                     {index + 1}
                 </button>
             ))}
 
-            <button disabled={pageNum === totalPages} onClick={() => setPageNum(pageNum + 1)}>Next</button>
+            <button 
+                disabled={pageNum === totalPages} 
+                onClick={() => setPageNum(pageNum + 1)}
+            >
+                Next
+            </button>
 
             <br />
             <label>
