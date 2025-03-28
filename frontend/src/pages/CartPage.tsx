@@ -5,6 +5,10 @@ import { CartItem } from '../types/CartItem';
 function CartPage() {
   const navigate = useNavigate();
   const { cart, removeFromCart } = useCart();
+
+  // Calculate the total price
+  const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+
   return (
     <div>
       <h2>Your cart</h2>
@@ -24,7 +28,8 @@ function CartPage() {
           </ul>
         )}
       </div>
-      <h3>Total: </h3>
+      {/* Display the total price */}
+      <h3>Total: ${totalAmount.toFixed(2)}</h3>
       <button>Checkout</button>
       <button onClick={() => navigate('/books')}>Continue Browsing</button>
     </div>
