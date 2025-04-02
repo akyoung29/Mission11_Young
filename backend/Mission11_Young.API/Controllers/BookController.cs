@@ -16,6 +16,7 @@ namespace Mission11_Young.API.Controllers
             _context = temp;
         }
 
+        [HttpGet("AllBooks")]
         public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, [FromQuery] List<string>? bookCategories = null, string sortOrder = "asc")
         {
             var query = _context.Books.AsQueryable();
@@ -61,6 +62,50 @@ namespace Mission11_Young.API.Controllers
                 .ToList();
 
             return Ok(bookCategories);
+        }
+
+        [HttpPost("AddBook")]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            _context.Books.Add(newBook);
+            _context.SaveChanges();
+            return Ok(newBook);
+        }
+
+        [HttpPut("UpdateBook/{bookID}")]
+        public IActionResult UpdateBook(int bookID, [FromBody] Book updateBook)
+        {
+            var existingBook = _context.Books.Find(bookID);
+
+            existingBook.Title = updateBook.Title;
+            existingBook.Author = updateBook.Author;
+            existingBook.Publisher = updateBook.Publisher;
+            existingBook.ISBN = updateBook.ISBN;
+            existingBook.Classification = updateBook.Classification;
+            existingBook.Category = updateBook.Category;
+            existingBook.PageCount = updateBook.PageCount;
+            existingBook.Price = updateBook.Price;
+
+            _context.Books.Update(existingBook);
+            _context.SaveChanges();
+
+            return Ok(existingBook);
+        }
+
+        [HttpDelete("DeleteBook/{bookID}")]
+        public IActionResult DeleteBook(int bookID)
+        {
+            var book = _context.Books.Find(bookID);
+
+            if (book == null)
+            {
+                return NotFound(new { message = "Book not found" });
+            }
+
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
+            return NoContent();
         }
     }
 }
