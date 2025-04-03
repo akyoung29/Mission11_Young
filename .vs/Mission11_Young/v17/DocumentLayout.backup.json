@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|c:\\users\\annay\\onedrive\\documents\\school\\is core\\is 413\\mission11_young\\backend\\mission11_young.api\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|solutionrelative:backend\\mission11_young.api\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|c:\\users\\annay\\onedrive\\documents\\school\\is core\\is 413\\mission11_young\\backend\\mission11_young.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|solutionrelative:backend\\mission11_young.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|c:\\users\\annay\\onedrive\\documents\\school\\is core\\is 413\\mission11_young\\backend\\mission11_young.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|solutionrelative:backend\\mission11_young.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|c:\\users\\annay\\onedrive\\documents\\school\\is core\\is 413\\mission11_young\\backend\\mission11_young.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCF59751-85AC-4F36-AA18-B48788C47ABE}|backend\\Mission11_Young.API\\Mission11_Young.API.csproj|solutionrelative:backend\\mission11_young.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,20 +25,46 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\.gitignore",
+              "RelativeDocumentMoniker": "backend\\Mission11_Young.API\\.gitignore",
+              "ToolTip": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\.gitignore",
+              "RelativeToolTip": "backend\\Mission11_Young.API\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-02T20:20:20.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "backend\\Mission11_Young.API\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Controllers\\BookController.cs",
+              "RelativeToolTip": "backend\\Mission11_Young.API\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAUwGsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T20:02:58.528Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Book.cs",
-              "RelativeDocumentMoniker": "backend\\Mission11_Young.API\\Book.cs",
-              "ToolTip": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Book.cs",
-              "RelativeToolTip": "backend\\Mission11_Young.API\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\Mission11_Young.API\\Program.cs",
+              "ToolTip": "C:\\Users\\annay\\OneDrive\\Documents\\School\\IS Core\\IS 413\\Mission11_Young\\backend\\Mission11_Young.API\\Program.cs",
+              "RelativeToolTip": "backend\\Mission11_Young.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T18:52:26.454Z",
+              "WhenOpened": "2025-03-19T19:17:01.073Z",
               "EditorCaption": ""
             }
           ]
