@@ -135,3 +135,4 @@ C:\Users\annay\OneDrive\Documents\School\IS Core\IS 413\Mission11_Young\backend\
 C:\Users\annay\OneDrive\Documents\School\IS Core\IS 413\Mission11_Young\backend\Mission11_Young.API\obj\Debug\net8.0\Mission11_Young.API.pdb
 C:\Users\annay\OneDrive\Documents\School\IS Core\IS 413\Mission11_Young\backend\Mission11_Young.API\obj\Debug\net8.0\Mission11_Young.API.genruntimeconfig.cache
 C:\Users\annay\OneDrive\Documents\School\IS Core\IS 413\Mission11_Young\backend\Mission11_Young.API\obj\Debug\net8.0\ref\Mission11_Young.API.dll
+C:\Users\annay\OneDrive\Documents\School\IS Core\IS 413\Mission11_Young\backend\Mission11_Young.API\bin\Debug\net8.0\Bookstore.sqlite
